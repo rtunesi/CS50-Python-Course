@@ -1,0 +1,11 @@
+Python Note:
+
+Lecture 1:
+~ var.capitalize() = To capitalize the first letter in the string.
+~ var.title() = To capitalize each words beginning letter in the string.
+~ var.strip() = Only include the first part of the string.
+~ Python has an interactive mode if needing to be used.
+~ You can press tab in the terminal to auto fill file names.
+~ You can use \" to include "" in print functions.
+~ You can format ,'s into numbers by using f"{z:,}" (Display: 1,000 or 1,000,000)
+
