@@ -8,4 +8,5 @@ Lecture 1:
 ~ You can press tab in the terminal to auto fill file names.
 ~ You can use \" to include "" in print functions.
 ~ You can format ,'s into numbers by using f"{z:,}" (Display: 1,000 or 1,000,000)
+~ Use code filename.py in terminal to create new files.
 
