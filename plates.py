@@ -13,32 +13,30 @@ def is_valid(carplate):
     if len(carplate) < 2 or len(carplate) > 6:
         return False
 
-    # All vanity plate must start with at least two letters
-    if carplate[0].isalpha() == False or carplate[1].isalpha() == False:
+    # check the plate starts with at least two letters
+    # is.alpha() returns True is the compaired value is a letter
+    if not(carplate[:2].isalpha()):
         return False
-
-    # Numbers cannot be used in the middle of a plate: have to come at the end
-    if carplate[2].isalpha() == False or carplate[3].isalpha() == False:
-        return False
-
-    # First number used cannot be a 0
-    i = 0
-    while i < len(carplate):
-        if carplate[i].isalpha() == True:
-            if carplate[i] == "0":
-                return False
-        else:
-            break
-        i += 1
-
-    # No period, spaces or punctuation marks allowed
+    
+    # check there isn't any punctuation
     for char in carplate:
         if char in forbidden:
             return False
         
-    
-    # If all tests are passed then return true
+    # check placement rules
+    has_number = False  # Track if we've seen a number
+    for i, char in enumerate(carplate):
+        if char.isdigit():  # If it's a number
+            if not has_number:  # First time seeing a number
+                if char == "0":  # First number cannot be 0
+                    return False
+                has_number = True  # Mark that we've seen a number
+        elif has_number:  # If we see a letter AFTER a number, it's invalid
+            return False
+
+
     return True
+ 
 
 
 if __name__ == "__main__":
