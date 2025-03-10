@@ -16,12 +16,12 @@ def fuel():
             x = int(x)
             y = int(y)
             total = x / y
-            total = round(total)
+            if y == 0 or x > y:
+                raise ValueError
+            return round(total * 100)
         except (ValueError, ZeroDivisionError):
             pass
-        else:
-            break
-    return total * 100
+
         
 
 if __name__ == "__main__":
