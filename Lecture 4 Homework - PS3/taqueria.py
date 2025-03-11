@@ -11,3 +11,15 @@ menu = {
 }
 
 total = 0
+
+while True:
+    item = str(input("Item: ")).upper()
+    try:
+        if item in menu:
+            total += menu[item]
+            print(f"Total: ${total}")
+        elif item == "":
+            break
+    except EOFError:
+        pass
+
