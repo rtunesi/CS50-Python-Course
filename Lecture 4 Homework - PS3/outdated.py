@@ -18,8 +18,8 @@ while True:
     try:
         # Splitting the date with /
         if "/" in date:
-            day, month, year = date.split("/")
-            print(day, month, year)
+            month, day, year = date.split("/")
+            print(month, day, year)
         # Splitting the date with , 
         elif "," in date:
-            day, month, year = date.split(",")
+            month, day, year = date.split(",")
