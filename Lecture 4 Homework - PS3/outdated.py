@@ -1,14 +1,25 @@
-diary = {
-    "Janruary": 0,
-    "February": 0,
-    "March": 0,
-    "April": 0,
-    "May": 0,
-    "June": 0,
-    "July": 0,
-    "August": 0,
-    "September": 0,
-    "October": 0,
-    "November": 0,
-    "December": 0
-}
+diary = [
+    "Janruary",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+]
+
+while True:
+    date = input("Date: ")
+    try:
+        # Splitting the date with /
+        if "/" in date:
+            day, month, year = date.split("/")
+            print(day, month, year)
+        # Splitting the date with , 
+        elif "," in date:
+            day, month, year = date.split(",")
