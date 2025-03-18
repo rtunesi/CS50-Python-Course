@@ -1,3 +1,8 @@
-x = "21212"
-y = x.split("1")
-print(y)
+# float decimal points
+# example 1
+x = 1.23456789
+print(f"x: {x:.2f}")
+
+# example 2
+x = 1.23456789
+print(f"x: {x:.0f}")
