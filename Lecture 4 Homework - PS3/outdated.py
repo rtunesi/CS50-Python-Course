@@ -20,6 +20,10 @@ while True:
         if "/" in date:
             month, day, year = date.split("/")
             print(month, day, year)
-        # Splitting the date with , 
-        elif "," in date:
-            month, day, year = date.split(",")
+            if (int(month) >= 1 and int(month) <= 12):
+                if (int(day) >= 1 and int(day) <= 31):
+                    break
+    except:
+        pass
+
+print(f"{year}-{month}-{day}")
