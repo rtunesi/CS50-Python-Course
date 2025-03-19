@@ -19,9 +19,12 @@ while True:
         # Splitting the date with /
         if "/" in date:
             month, day, year = date.split("/")
-            if (int(month) >= 1 and int(month) <= 12):
-                if (int(day) >= 1 and int(day) <= 31):
-                    print(f"{year}-{month}-{day}")
+            month = int(month)
+            day = int(day)
+            year = int(year)
+            if (month >= 1 and month <= 12):
+                if (day >= 1 and day <= 31):
+                    print(f"{year:04d}-{month:02d}-{day:02d}")
                     break
         # Splitting the date with ,
         elif "," in date:
@@ -30,18 +33,13 @@ while True:
                 month_name, day, year = split[0].title(), split[1].strip(","), split[2]
                 if month_name in diary:
                     month = diary[month_name]
-                    if (int(month) >= 1 and int(month) <=12):
-                        if (int(day) >= 1 and int(day) <=31):
-                            if month <= 9 and int(day) <= 9:
-                                print(f"{year}-0{month}-0{day}")
-                            elif int(day) <= 9:
-                                print(f"{year}-{month}-0{day}")
-                            elif month <= 9:
-                                print(f"{year}-0{month}-{day}")
-                            else:
-                                print(f"{year}-{month}-{day}")
+                    month = int(month)
+                    day = int(day)
+                    year = int(year)
+                    if (int(day) >= 1 and int(day) <=31):
+                        print(f"{year:04d}-{month:02d}-{day:02d}")
                         break
 
-    except ValueError:
+    except:
         pass
 
