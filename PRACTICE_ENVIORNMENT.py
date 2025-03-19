@@ -1,4 +1,3 @@
-def intConvert(d, m, y):
-    return int(d), int(m), int(y)
+import random
 
-print(intConvert("9", "19", "20"))
+print(random.randint(1, 10))
