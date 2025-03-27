@@ -28,4 +28,5 @@ def printRacers():
         print(person)
 
 
-main()
+if __name__ == "__main__":
+    main()
